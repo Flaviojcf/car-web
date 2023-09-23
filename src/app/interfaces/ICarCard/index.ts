@@ -10,4 +10,5 @@ export default interface ICarCard {
   make: string
   model: string
   transmission: string
+  year: number
 }

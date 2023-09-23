@@ -5,4 +5,7 @@ export default interface ICustomButton {
   containerStyle?: string
   handleClick?: MouseEventHandler<HTMLButtonElement>
   btnType: 'button' | 'submit'
+  textStyles?: string
+  rightIcon?: string
+  isDisabled?: boolean
 }
