@@ -4,7 +4,13 @@ import Image from 'next/image'
 import { CustomButton } from '@/app/components/CustomButton'
 
 export function HeroSection() {
-  function handleScroll() {}
+  function handleScroll() {
+    const carsSection = document.querySelector('#discover')
+
+    if (carsSection) {
+      carsSection.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <div className="hero">
