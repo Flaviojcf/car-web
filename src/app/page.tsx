@@ -3,18 +3,27 @@ import { HeroSection } from '@/app/Sections/HeroSection'
 import { SearchBar } from '@/app/components/SearchBar'
 import { CustomFilter } from '@/app/components/CustomFilter'
 import { CarCard } from '@/app/components/CarCard'
-import ICarCard from './interfaces/ICarCard'
+import ICarCard from '@/app/interfaces/ICarCard'
+import { IFilter } from '@/app/interfaces/IFilter'
+import { fuels, yearsOfProduction } from '@/utils/mock/constants'
+import { ShowMore } from '@/app/components/ShowMore'
 
-export default async function Home() {
-  const allCars = await fetchCars()
+export default async function Home({ ...searchParams }: IFilter) {
+  const allCars = await fetchCars({
+    manufacturer: searchParams.manufacturer || '',
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || '',
+    limit: searchParams.limit || 10,
+    model: searchParams.model || '',
+  })
 
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars
 
   return (
     <main className="">
       <HeroSection />
-      <div className="mt-12 padding-x padding-y max-width" id="discover">
-        <div className="home__text-container">
+      <div className="mt-12 padding-x padding-y max-width">
+        <div className="home__text-container" id="discover">
           <h1 className="text-4xl font-extrabold dark:text-white transition-colors duration-200">
             Car Catalogue
           </h1>
@@ -25,8 +34,8 @@ export default async function Home() {
           <div className="home__filter-contaienr"></div>
         </div>
         <div className="home__filter-container">
-          <CustomFilter title="fuel" />
-          <CustomFilter title="year" />
+          <CustomFilter title="fuel" options={fuels} />
+          <CustomFilter title="year" options={yearsOfProduction} />
         </div>
         {!isDataEmpty ? (
           <section>
@@ -35,6 +44,7 @@ export default async function Home() {
                 <CarCard {...car} key={`${car.model}-${index}`} />
               ))}
             </div>
+            <ShowMore />
           </section>
         ) : (
           <div className="home__error-container">
