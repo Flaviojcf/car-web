@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative">
+      <body className="relative dark:bg-gray-900 transition-colors duration-200">
         <Navbar />
         {children}
         <Footer />

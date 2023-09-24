@@ -12,14 +12,16 @@ export function CarCard({ ...carCard }: ICarCard) {
   const carRent = calculateCarRent(carCard.city_mpg, carCard.year)
 
   return (
-    <div className="car-card group">
-      <div className="car-card__content">
+    <div className="car-card group dark:bg-slate-500 transition-colors duration-200">
+      <div className="car-card__content dark:text-gray-300 transition-colors duration-200">
         <h2>
           {carCard.make} {carCard.model}
         </h2>
       </div>
-      <p className="flex mt-6 text-[32px] font-extrabold">
-        <span className="self-start text-[14px] font-semibold">$</span>
+      <p className="flex mt-6 text-[32px] font-extrabold dark:text-gray-300 transition-colors duration-200">
+        <span className="self-start text-[14px] font-semibold dark:text-gray-300 transition-colors duration-200">
+          $
+        </span>
         {carRent}
         <span className="self-end text-[14px] font-medium">/day</span>
       </p>
@@ -41,17 +43,21 @@ export function CarCard({ ...carCard }: ICarCard) {
               width={20}
               height={20}
             />
-            <p className="text-[14px]">
+            <p className="text-[14px] dark:text-gray-300 transition-colors duration-200">
               {carCard.transmission === 'a' ? 'Automatic' : 'Manual'}
             </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
             <Image src="/tire.svg" alt="Tire" width={20} height={20} />
-            <p className="text-[14px]">{carCard.drive.toUpperCase()}</p>
+            <p className="text-[14px] dark:text-gray-300 transition-colors duration-200">
+              {carCard.drive.toUpperCase()}
+            </p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
             <Image src="/gas.svg" alt="Gas" width={20} height={20} />
-            <p className="text-[14px]">{carCard.city_mpg}MPG</p>
+            <p className="text-[14px] dark:text-gray-300 transition-colors duration-200">
+              {carCard.city_mpg}MPG
+            </p>
           </div>
         </div>
         <div className="car-card__btn-container">

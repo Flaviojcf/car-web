@@ -7,7 +7,7 @@ export function SearchBar() {
   function handleSearch() {}
   return (
     <form className="searchbar" onSubmit={handleSearch}>
-      <div className="searchbar__item">
+      <div className="searchbar__item dark:text-gray-200">
         <SearchManufacturer
           manufacturer={manufacturer}
           setManufacturer={setManufacturer}

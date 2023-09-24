@@ -23,7 +23,7 @@ export function CarDetails({ car, closeModal, isOpen }: ICarDetails) {
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="flex min-h-full items-center justify-center p-4 text-center  ">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -34,7 +34,7 @@ export function CarDetails({ car, closeModal, isOpen }: ICarDetails) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel
-                  className="relative w-full max-w-lg max-h-[90vh] 
+                  className="relative w-full max-w-lg max-h-[90vh]  dark:bg-slate-700 duration-200
                 overflow-y-auto transform rounded-2xl bg-white p-6 text-left shadow-xl transition-all flex flex-col gap-5"
                 >
                   <button
@@ -94,20 +94,20 @@ export function CarDetails({ car, closeModal, isOpen }: ICarDetails) {
                   </div>
 
                   <div className="flex-1 flex flex-col gap-2">
-                    <h2 className="font-semibold text-xl capitalize">
+                    <h2 className="font-semibold text-xl capitalize dark:text-gray-100 transition-colors duration-200">
                       {car.make} {car.model}
                     </h2>
 
                     <div className="mt-3 flex flex-wrap gap-4">
                       {Object.entries(car).map(([key, value]) => (
                         <div
-                          className="flex justify-between gap-5 w-full text-right"
+                          className="flex justify-between gap-5 w-full text-right dark:text-gray-200 transition-colors duration-200"
                           key={key}
                         >
-                          <h4 className="text-grey capitalize">
+                          <h4 className="text-grey capitalize dark:text-gray-200 transition-colors duration-200">
                             {key.split('_').join(' ')}
                           </h4>
-                          <p className="text-black-100 font-semibold">
+                          <p className="text-black-100 font-semibold dark:text-gray-400">
                             {value}
                           </p>
                         </div>
