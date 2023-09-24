@@ -5,6 +5,7 @@ import ICarCard from '@/app/interfaces/ICarCard'
 import { calculateCarRent } from '@/utils/helpers/calculateCarRent'
 import { CustomButton } from '@/app/components/CustomButton'
 import { CarDetails } from '@/app/components/CarDetails'
+import { generateCarImageUrl } from '@/utils/helpers/generateCarImageUrl'
 
 export function CarCard({ ...carCard }: ICarCard) {
   const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -27,7 +28,7 @@ export function CarCard({ ...carCard }: ICarCard) {
       </p>
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src="/hero.png"
+          src={generateCarImageUrl(carCard)}
           alt="Car model"
           fill
           priority
