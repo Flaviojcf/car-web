@@ -2,6 +2,7 @@ import { Footer } from '@/app/components/Footer'
 import { Navbar } from '@/app/components/Navbar'
 import './globals.css'
 import type { Metadata } from 'next'
+import { BackToTop } from '@/app/components/BackToTop'
 
 export const metadata: Metadata = {
   title: 'Web Car',
@@ -19,6 +20,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <BackToTop />
       </body>
     </html>
   )
