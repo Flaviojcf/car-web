@@ -7,6 +7,11 @@ import { BackToTop } from '@/app/components/BackToTop'
 export const metadata: Metadata = {
   title: 'Web Car',
   description: 'The bests cars',
+  icons: [
+    {
+      url: '/logo.svg',
+    },
+  ],
 }
 
 export default function RootLayout({
