@@ -1,13 +1,12 @@
 import { fetchCars } from '@/api/api'
-
 import { SearchBar } from '@/app/components/SearchBar'
-import { IHome } from './interfaces/IHome'
-import { HeroSection } from './sections/HeroSection'
-import { CustomFilter } from './components/CustomFilter'
-import ICarCard from './interfaces/ICarCard'
-import { CarCard } from './components/CarCard'
-import { ShowMore } from './components/ShowMore'
+import { CustomFilter } from '@/app/components/CustomFilter'
+import { CarCard } from '@/app/components/CarCard'
+import ICarCard from '@/app/interfaces/ICarCard'
 import { fuels, yearsOfProduction } from '@/utils/mock/constants'
+import { ShowMore } from '@/app/components/ShowMore'
+import { IHome } from '@/app/interfaces/IHome'
+import { HeroSection } from '@/app/sections/HeroSection'
 
 export default async function Home({ searchParams }: IHome) {
   const allCars = await fetchCars({
