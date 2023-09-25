@@ -4,9 +4,9 @@ import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
-function SearchButton({ otherCLasses }: { otherCLasses: string }) {
+function SearchButton({ otherClasses }: { otherClasses: string }) {
   return (
-    <button type="submit" className={`-ml-3 z-10 ${otherCLasses}`}>
+    <button type="submit" className={`-ml-3 z-10 ${otherClasses}`}>
       <Image
         src="/magnifying-glass.svg"
         alt="Magnifying glass"
@@ -17,7 +17,6 @@ function SearchButton({ otherCLasses }: { otherCLasses: string }) {
     </button>
   )
 }
-
 export function SearchBar() {
   const [manufacturer, setManufacturer] = useState<string>('')
   const [model, setModel] = useState<string>('')
@@ -45,37 +44,37 @@ export function SearchBar() {
     }
 
     const newPathname = `${window.location.pathname}?${searchParams.toString()}`
-    router.push(newPathname)
+    router.push(newPathname, { scroll: false })
   }
 
   return (
-    <form className="searchbar mb-4" onSubmit={handleSearch}>
-      <div className="searchbar__item dark:text-gray-200">
+    <form className="searchbar z-20" onSubmit={handleSearch}>
+      <div className="searchbar__item">
         <SearchManufacturer
           manufacturer={manufacturer}
           setManufacturer={setManufacturer}
         />
-        <SearchButton otherCLasses="sm:hidden" />
+        <SearchButton otherClasses="sm:hidden" />
       </div>
-      <div className="searchbar__item dark:text-gray-200">
+      <div className="searchbar__item">
         <Image
           src="/model-icon.png"
-          alt="Car model"
           width={25}
           height={25}
-          className="absolut w-[20px] h-[20px] ml-4"
+          className="absolute w-[20px] h-[20px] ml-4"
+          alt="car model"
         />
         <input
           type="text"
           name="model"
           value={model}
           onChange={(e) => setModel(e.target.value)}
-          placeholder="Tiguan"
-          className="searchbar__input dark:bg-gray-50 transition-colors duration-200"
+          placeholder="Tiguan..."
+          className="searchbar__input dark:bg-gray-50 transition-colors duration-200 dark:mr-4"
         />
-        <SearchButton otherCLasses="sm:hidden" />
+        <SearchButton otherClasses="sm:hidden" />
       </div>
-      <SearchButton otherCLasses="max-sm:hidden" />
+      <SearchButton otherClasses="max-sm:hidden" />
     </form>
   )
 }
