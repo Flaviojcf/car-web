@@ -1,14 +1,14 @@
 import { fetchCars } from '@/api/api'
-import { HeroSection } from '@/app/Sections/HeroSection'
+import { HeroSection } from '@/app/sections/HeroSection'
 import { SearchBar } from '@/app/components/SearchBar'
 import { CustomFilter } from '@/app/components/CustomFilter'
 import { CarCard } from '@/app/components/CarCard'
 import ICarCard from '@/app/interfaces/ICarCard'
-import { IFilter } from '@/app/interfaces/IFilter'
 import { fuels, yearsOfProduction } from '@/utils/mock/constants'
 import { ShowMore } from '@/app/components/ShowMore'
+import { IHome } from '@/app/interfaces/IHome'
 
-export default async function Home({ ...searchParams }: IFilter) {
+export default async function Home({ searchParams }: IHome) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || '',
     year: searchParams.year || 2022,
@@ -20,22 +20,25 @@ export default async function Home({ ...searchParams }: IFilter) {
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars
 
   return (
-    <main className="">
+    <main className="overflow-hidden">
       <HeroSection />
-      <div className="mt-12 padding-x padding-y max-width">
-        <div className="home__text-container" id="discover">
+
+      <div className="mt-12 padding-x padding-y max-width" id="discover">
+        <div className="home__text-container">
           <h1 className="text-4xl font-extrabold dark:text-white transition-colors duration-200">
             Car Catalogue
           </h1>
           <p className="dark:text-gray-200">Explore out cars you might like</p>
         </div>
+
         <div className="home__filters">
           <SearchBar />
           <div className="home__filter-contaienr"></div>
-        </div>
-        <div className="home__filter-container">
-          <CustomFilter title="fuel" options={fuels} />
-          <CustomFilter title="year" options={yearsOfProduction} />
+
+          <div className="home__filter-container">
+            <CustomFilter title="fuel" options={fuels} />
+            <CustomFilter title="year" options={yearsOfProduction} />
+          </div>
         </div>
         {!isDataEmpty ? (
           <section>
@@ -44,12 +47,16 @@ export default async function Home({ ...searchParams }: IFilter) {
                 <CarCard {...car} key={`${car.model}-${index}`} />
               ))}
             </div>
-            <ShowMore />
+            <ShowMore
+              pageNumber={(searchParams.limit || 10) / 10}
+              isNext={(searchParams.limit || 10) > allCars.length}
+            />
           </section>
         ) : (
           <div className="home__error-container">
-            <h2 className="text-black text-xl font-bold">Oops, no results</h2>
-            {/* <p>{allCars?.message}</p> */}
+            <h2 className="text-black text-xl font-bold dark:text-gray-200">
+              Oops, no results
+            </h2>
           </div>
         )}
       </div>
