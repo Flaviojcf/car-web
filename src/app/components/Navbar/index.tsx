@@ -38,11 +38,6 @@ export function Navbar() {
             className="object-contain"
           />
         </Link>
-        <CustomButton
-          text="Sign In"
-          containerStyle="rounded-full min-w-[130px] bg-primary-blue text-white"
-          btnType="button"
-        />
 
         <div onClick={handleThemeSwitch}>
           <CiDark
