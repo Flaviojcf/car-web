@@ -9,7 +9,7 @@ export function CarDetails({ car, closeModal, isOpen }: ICarDetails) {
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog as="div" className="relative z-50" onClose={closeModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -57,7 +57,6 @@ export function CarDetails({ car, closeModal, isOpen }: ICarDetails) {
                         src={generateCarImageUrl(car)}
                         alt="car model"
                         fill
-                        priority
                         className="object-contain"
                       />
                     </div>
@@ -68,7 +67,6 @@ export function CarDetails({ car, closeModal, isOpen }: ICarDetails) {
                           src={generateCarImageUrl(car, '29')}
                           alt="car model"
                           fill
-                          priority
                           className="object-contain"
                         />
                       </div>
@@ -77,7 +75,6 @@ export function CarDetails({ car, closeModal, isOpen }: ICarDetails) {
                           src={generateCarImageUrl(car, '33')}
                           alt="car model"
                           fill
-                          priority
                           className="object-contain"
                         />
                       </div>
@@ -86,7 +83,6 @@ export function CarDetails({ car, closeModal, isOpen }: ICarDetails) {
                           src={generateCarImageUrl(car, '13')}
                           alt="car model"
                           fill
-                          priority
                           className="object-contain"
                         />
                       </div>
