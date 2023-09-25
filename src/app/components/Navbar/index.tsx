@@ -7,12 +7,7 @@ import { MdDarkMode } from 'react-icons/md'
 import { useState, useEffect } from 'react'
 
 export function Navbar() {
-  const initialTheme = localStorage.getItem('theme') || 'dark'
-  const [theme, setTheme] = useState<string>(initialTheme)
-
-  useEffect(() => {
-    localStorage.setItem('theme', theme)
-  }, [theme])
+  const [theme, setTheme] = useState<string>('dark')
 
   useEffect(() => {
     if (theme === 'dark') {
