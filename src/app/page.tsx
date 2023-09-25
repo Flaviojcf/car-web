@@ -6,7 +6,7 @@ import ICarCard from '@/app/interfaces/ICarCard'
 import { fuels, yearsOfProduction } from '@/utils/mock/constants'
 import { ShowMore } from '@/app/components/ShowMore'
 import { IHome } from '@/app/interfaces/IHome'
-import { HeroSection } from '@/app/sections/HeroSection'
+import { HeroSection } from '@/app/Sections/HeroSection'
 
 export default async function Home({ searchParams }: IHome) {
   const allCars = await fetchCars({
