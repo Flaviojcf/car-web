@@ -13,7 +13,7 @@ export function CarCard({ ...carCard }: ICarCard) {
   const carRent = calculateCarRent(carCard.city_mpg, carCard.year)
 
   return (
-    <div className="car-card group dark:bg-slate-500 transition-colors duration-200">
+    <div className="car-card group  dark:bg-slate-500 transition-colors duration-200 ">
       <div className="car-card__content dark:text-gray-300 transition-colors duration-200">
         <h2>
           {carCard.make} {carCard.model}
@@ -31,7 +31,6 @@ export function CarCard({ ...carCard }: ICarCard) {
           src={generateCarImageUrl(carCard)}
           alt="Car model"
           fill
-          priority
           className="object-contain"
         />
       </div>
