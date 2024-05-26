@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="[https://github.com/Flaviojcf/car-web](https://github.com/Flaviojcf/car-web)">
-      <img src="/public/car-web.png" alt="Logo"/>
+      <img src="/public/web-car.png" alt="Logo"/>
   </a>
 
 
