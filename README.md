@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<a name="readme-top"></a>
+<h1 align="center">WEB CAR</h1>
 
-## Getting Started
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-First, run the development server:
+<br />
+<div align="center">
+  <a href="[https://github.com/Flaviojcf/car-web](https://github.com/Flaviojcf/car-web)">
+      <img src="/public/car-web.png" alt="Logo"/>
+  </a>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  <p align="center">
+   Este projeto é um catálogo de carros que visa fornecer aos usuários uma ampla gama de informações essenciais sobre diversos modelos de veículos..
+    <br />
+    <a href="https://github.com/Flaviojcf/car-web"><strong>Explore o código »</strong></a>
+    <br />
+    <br />
+    <a href="https://[docearia.vercel.app](https://car-web-pi.vercel.app/)/">Projeto online</a>
+  </p>
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+### Construído com as seguintes tecnologias
 
-To learn more about Next.js, take a look at the following resources:
+- [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white)](https://reactjs.org/)
+- [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white)](https://nextjs.org/)
+- [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)](https://www.typescriptlang.org/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contato
+[@flavio_jCosta](mailto:flaviojcostafilho@gmail.com) - flaviojcostafilho@gmail.com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Link do projeto online: [docearia](https://https://car-web-pi.vercel.app/)
 
-## Deploy on Vercel
+<p align="right">(<a href="#readme-top">Voltar para o início</a>)</p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[contributors-shield]: https://img.shields.io/github/contributors/flaviojcf/car-web.svg?style=for-the-badge
+[contributors-url]: https://github.com/Flaviojcf/car-web/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/flaviojcf/docearia.svg?style=for-the-badge
+[forks-url]: https://github.com/Flaviojcf/car-web/network/members
+[stars-shield]: https://img.shields.io/github/stars/flaviojcf/car-web.svg?style=for-the-badge
+[stars-url]: https://github.com/Flaviojcf/car-web/stargazers
+[issues-shield]: https://img.shields.io/github/issues/flaviojcf/car-web.svg?style=for-the-badge
+[issues-url]: https://github.com/Flaviojcf/car-web/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/flávio-jcosta
